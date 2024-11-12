@@ -1,0 +1,213 @@
+/* Start Global Rules */
+:root {
+    --main-color: #2196F3;
+    --main-color-alt: #1787e0;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-focus-ring-color:rgba(255, 255, 255, 0);
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Cairo", sans-serif;
+    
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    margin:0 auto;
+    padding: 0 15px;
+    
+}
+/* mobile Screen */
+@media (max-width:767px){
+    
+}
+/* Small Screen */
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+    
+}
+/* Medium Screen */
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+
+}
+/* Large Screen */
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+/* Start header */
+header{
+
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .container a{
+    display: flex;
+    align-items: center;
+    height: 72px;
+}
+header .container .logo{
+    color: var(--main-color);
+    font-size: 25px;
+    font-weight: 700;
+}
+header .container .nav{
+    display: flex;
+    align-items: center;
+}
+header .container .nav > li a{
+    padding: 0 30px;
+    font-size: 18px;
+    transition: 0.3s;
+    position: relative;
+
+
+}
+header .container .nav > li > a:hover{
+    color: var(--main-color-alt);
+    background-color: #fafafa;
+}
+header .container .nav > li > a:hover::before{
+    width: 100%;
+    animation: fill-bar 0.3s ease-out;
+    content: '';
+    position: absolute;
+    height: 4px;
+    background-color: var(--main-color-alt);
+    top: 0;
+    left: 0;
+}
+@keyframes fill-bar{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@media (max-width:767px){
+    header .container{
+        flex-direction: column;
+
+    }
+    header .container .logo{
+        height: 51px;
+    }
+    header .container .nav > li a{
+        padding: 10px;
+        font-size: 14px;
+        height: 40px;
+    }
+}
+
+/* Mega Menu */
+header .container .nav li:last-child .mega-menu{
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: calc(100% + 1px);
+    animation: smooth-up 0.3s;
+    padding: 20px;
+    border-bottom: var(--main-color) 5px solid;
+    gap: 20px;
+}
+header .container .nav li:last-child:hover .mega-menu{
+    display: flex;
+    
+    
+}
+@keyframes smooth-up{
+    0%{
+        top: calc(100% + 20px);
+    }
+    100%{
+        top: calc(100% + 1px);
+    }
+}
+header .container .nav li:last-child .mega-menu a{
+    height: fit-content;
+    display: block;
+    padding: 0;
+    color: var(--main-color);
+}
+header .container .nav li:last-child .mega-menu .links{
+    flex: 1;
+}
+header .container .nav li:last-child .mega-menu .links li{
+    position: relative;
+}
+header .container .nav li:last-child .mega-menu .links li a{
+    padding: 15px;
+}
+header .container .nav li:last-child .mega-menu .links li:not(:last-child) a{
+    border-bottom: #fafafa 3px solid;
+}
+header .container .nav li:last-child .mega-menu .links li:hover::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    animation: fill-bar 0.3s;
+    height: 100%;
+    background-color: #fafafa;
+    top: 0;
+    left: 0;
+}
+@media (max-width:767px){
+    header .container .nav li:last-child .mega-menu{
+        flex-direction: column;
+        gap: 0;
+        
+    }
+    header .container .nav li:last-child .mega-menu .links li a{
+        border-bottom: #fafafa 3px solid;
+    }
+    header .container .nav li:last-child .mega-menu .links:last-child li:last-child a{
+        border-bottom:none;
+    }
+
+}
+@media (max-width:992px){
+    .image{
+        display: none;
+    }
+
+}
+@media (max-width:1200px){
+    .image img{
+        width: 400px;
+    }
+
+}
+
+/* Mega Menu */
+
+/* End header */
