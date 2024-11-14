@@ -18,7 +18,7 @@ html{
 }
 body{
     font-family: "Cairo", sans-serif;
-    
+
 }
 ul{
     list-style: none;
@@ -312,7 +312,7 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
 
 /* Start Articles */
 .articles{
-    padding: 100px;
+    padding: 100px 0;
     
 }
 .main-heading{
