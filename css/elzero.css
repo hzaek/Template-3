@@ -328,6 +328,7 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
     font-weight: 700;
     transition-property: color , border;
     transition: 0.3s;
+    margin-bottom: 50px;
 
 }
 .main-heading:hover{
@@ -401,6 +402,74 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
         height: 68.5px;
         right: 0;
         border-radius: 0;
+    }
+}
+
+.articles .container .articles-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 20px;
+}
+.articles .container .articles-wrapper > div{
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    border-radius: var(--border-radius);
+    --border-radius:6px;
+    transition: 0.5s;
+}
+.articles .container .articles-wrapper > div:hover{
+    transform:translateY(-10px);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 30%)
+}
+
+.articles .container .articles-wrapper > div img{
+    width: 100%;
+
+    object-fit: cover;
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+}
+.articles .container .articles-wrapper > div h2{
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.articles .container .articles-wrapper > div p{
+    padding: 10px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    padding-left: 20px;
+}
+.articles .container .articles-wrapper > div hr{
+    border: none;
+    height: 1px;
+    background-color: #e6e6e7;
+    margin-bottom: 10px;
+}
+.articles .container .articles-wrapper > div span{
+    padding: 10px;
+    padding-left: 20px;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--main-color);
+    position: relative;
+    font-weight: 700;
+}
+.articles .container .articles-wrapper > div span i{
+    position: absolute;
+    right: 20px;
+}
+.articles .container .articles-wrapper > div:hover span i{
+    animation: arrow 0.5s infinite linear;
+}
+@keyframes arrow{
+    0%{
+        right:20px;
+    }
+    100%{
+        right:10px;
     }
 }
 /* End Articles */
