@@ -318,21 +318,23 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
 .main-heading{
     text-transform: uppercase;
     display: block;
-    border: black 3px solid;
+    border: black 2px solid;
     padding: 15px;
     user-select: none;
     width: fit-content;
     margin: 0 auto;
     position: relative;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 700;
     transition-property: color , border;
     transition: 0.3s;
+
 }
 .main-heading:hover{
     transition-delay: 0.4s;
     border-color: var(--main-color);
     color: white;
+    
 }
 .main-heading::before{
     content: '';
@@ -364,7 +366,7 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
     }
     100%{
         width: 50%;
-        height: 110%;
+        height: 68.5px;
         left: 0;
         border-radius: 0;
     }
@@ -396,7 +398,7 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
     }
     100%{
         width: 50%;
-        height: 110%;
+        height: 68.5px;
         right: 0;
         border-radius: 0;
     }
