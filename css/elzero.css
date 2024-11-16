@@ -625,7 +625,7 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
     line-height: 2;
     font-size: 23px;
     color: #666;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 }
 .features .features-wrapper .text a{
     text-transform: uppercase;
