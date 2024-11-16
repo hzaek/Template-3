@@ -336,7 +336,7 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
     transition-delay: 0.4s;
     border-color: white;
     color: white;
-    background-color: var(--main-color);
+
 }
 .main-heading::before{
     content: '';
@@ -365,8 +365,8 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
         height: 15px;
     }
     100%{
-        width: 50%;
-        height: 68.5px;
+        width: 51%;
+        height: 100%;
         left: 0;
         border-radius: 0;
     }
@@ -398,7 +398,7 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
     }
     100%{
         width: 50%;
-        height: 68.5px;
+        height: 100%;
         right: 0;
         border-radius: 0;
     }
@@ -477,6 +477,19 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
 .gallery{
     padding: 100px 0;
     background-color: #ececec;
+    position: relative;
+}
+.gallery::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+    background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+    background-size: 30px 30px;
+    bottom: calc(100% - 30px);
+    z-index: 33;
 }
 .gallery-wrapper{
     display: grid;
@@ -490,6 +503,9 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
 .gallery-wrapper .box div{
     overflow: hidden;
     position: relative;
+    display: flex;
+
+
 }
 .gallery-wrapper .box div::before{
     content: '';
@@ -520,6 +536,7 @@ header .container .nav li:last-child .mega-menu .links li:hover::before{
 .gallery-wrapper .box div img{
     width: 100%;
     transition: 0.4s;
+    
 }
 .gallery-wrapper .box div:hover img{
     transform: scale(1.1) rotate(5deg);
