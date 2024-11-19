@@ -1156,3 +1156,75 @@ section{
     content: '';
 }
 /* End our-skills */
+
+/* Start How-it-works */
+.work-steps{
+    background-color: #ececec;
+}
+.work-steps .container{
+    display: flex;
+    justify-content: space-around;
+    
+    gap: 40px;
+}
+@media (max-width:992px){
+    .work-steps .container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.work-steps .container > img{
+    max-width: 100%;
+    width: 500px;
+    user-select: none;
+}
+.work-steps .steps article{
+    display: flex;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    gap: 20px;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 20px;
+    align-items: center;
+}
+@media (max-width:768px){
+    .work-steps .container article{
+        flex-direction: column;
+        align-items: center;
+    }
+    .work-steps .container article .text{
+        text-align: center;
+    }
+}
+.work-steps .steps article::before{
+    height: 0;
+    width: 0;
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%,50%);
+    background-color: #ececec;
+    transition: 0.3s;
+    border-radius: 5px;
+    z-index: -1;
+
+}
+.work-steps .steps article:hover::before{
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+}
+.work-steps .steps article .text h2{
+    margin-bottom: 10px;
+}
+.work-steps .steps article .text p{
+    color: #666;
+}
+.work-steps .steps article img{
+    width: 80px;
+    height: 80px;
+    user-select: none;
+}
+/* End How-it-works */
