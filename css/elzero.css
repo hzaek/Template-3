@@ -455,7 +455,7 @@ header .container .nav li:last-child .mega-menu .links li:hover::before {
     bottom: 50%;
     transform: translate(0, 50%);
     left: 0;
-    left: -25%;
+    left: -40px;
     border-radius: 50%;
     z-index: -1;
 
@@ -511,7 +511,7 @@ header .container .nav li:last-child .mega-menu .links li:hover::before {
     border-radius: 50%;
     bottom: 50%;
     transform: translate(0, 50%);
-    right: -25%;
+    right: -40px;
     z-index: -1;
 }
 
@@ -1228,3 +1228,156 @@ section{
     user-select: none;
 }
 /* End How-it-works */
+
+/* Start Events */
+.events{
+    position: relative;
+    z-index: 1;
+    
+}
+.events::before{
+    content: '';
+    z-index: -1;
+    height: 186px;
+    width: 204px;
+    position: absolute;
+    
+    background: url(../images/dots.png);
+    left: 0;
+    bottom: 50%;
+}
+.events::after{
+    content: '';
+    z-index: -1;
+    height: 186px;
+    width: 204px;
+    position: absolute;
+    top: 50%;
+    background: url(../images/dots.png);
+    right: 0;
+}
+.events .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.events .container > img{
+    max-width: 450px;
+}
+
+.events .container .info{
+    flex: 1;
+    text-align: center;
+    
+}
+.events .container .info .timer{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+   
+}
+.events .container .info .timer > div{
+    width: 75px;
+}
+.events .container .info .timer .time{
+    color: #1787e0;
+    font-size: 40px;
+    padding: 20px;
+    border: 3px #ececec solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.events .container .info .timer p{
+    font-size: 13px;
+    padding: 20px 10px;
+    border: 3px #ececec solid;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.events .container .info > h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+.events .container .info > p{
+    color: #777;
+    font-size: 18px;
+    line-height: 1.5;
+}
+@media (max-width:992px){
+    .events::after{
+        display: none;
+    }
+    .events::before{
+        display: none;
+    }
+    .events .container > img{
+        display: none;
+    }
+}
+.events .container form{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.events .container form .form-wrapper{
+    padding: 20px;
+    background-color: #ececec;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.events .container form .form-wrapper input[type='text']{
+    outline: none;
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    margin-right: 10px;
+    transition: 0.3s;
+    font-size: 20px;
+    
+    
+}
+.events .container form .form-wrapper input[type='text']::placeholder{
+    font-size: 18px;
+    transition: 0.3s;
+}
+.events .container form .form-wrapper input[type='text']:focus::placeholder{
+    opacity: 0;
+}
+.events .container form .form-wrapper input[type='submit']{
+    outline: none;
+    padding: 20px 20px;
+    border-radius: 50px;
+    border: none;
+    margin-right: 20px;
+    transition: 0.3s;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+}
+.events .container form .form-wrapper input[type='submit']:hover{
+    background-color: var(--main-color-alt);
+}
+@media (max-width:769px){
+    .events .container form .form-wrapper input[type='text']{
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .events .container form .form-wrapper input[type='submit']{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    .events .container form .form-wrapper{
+        border-radius: 0;
+    }
+}
+/* End Events */
