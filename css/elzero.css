@@ -1449,7 +1449,7 @@ section{
     height: 50%;
     z-index: -1;
     width:0%;
-    background-color: #ececec;
+    background-color: rgba(0,0,0,0.05);
     transition: 0.3s;
 }
 .pricing .container .box::before{
@@ -1460,7 +1460,7 @@ section{
     height: 50%;
     z-index: -1;
     width: 0%;
-    background-color: #ececec;
+    background-color: rgba(0,0,0,0.05);
     transition: 0.3s;
 }
 .pricing .container .box:hover::before,.pricing .container .box:hover::after{
@@ -1533,18 +1533,20 @@ section{
     top: 0;
     right: 20px;
     writing-mode: vertical-lr;
+    width: 44px;
+    box-sizing: border-box;
 }
 .pricing .container .box:nth-child(2) .plan .label::after{
-    bottom: -42px;
+    top: 100%;
     content: '';
     left: 0;
     position: absolute;
     border-color: #1787e0 #1787e0 transparent #1787e0;
-    border-width: 22px;
-    border-style: solid;
-    transition: 0.2s;
-    transition-delay: 0.2s;
-    
+    box-sizing: border-box;
+    border-style: solid; 
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
 }
 
 /* End pricing */
