@@ -896,7 +896,8 @@ header .container .nav li:last-child .mega-menu .links li:hover::before {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     row-gap: 55px;
-    column-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
 }
 .testimonails .container article{
     background-color: white;
@@ -971,7 +972,8 @@ section{
     transition: 0.3s;
 }
 .team .container article:hover .image img{
-    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
 }
 .team .container article > .image ul{
     display: flex;
@@ -1176,7 +1178,10 @@ section{
 .work-steps .container > img{
     max-width: 100%;
     width: 500px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 .work-steps .steps article{
     display: flex;
@@ -1225,7 +1230,10 @@ section{
 .work-steps .steps article img{
     width: 80px;
     height: 80px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 /* End How-it-works */
 
@@ -1323,6 +1331,8 @@ section{
 .events .container form .form-wrapper{
     padding: 20px;
     background-color: #ececec;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
     border-radius: 50px;
@@ -1341,9 +1351,41 @@ section{
     
     
 }
+.events .container form .form-wrapper input[type='text']::-webkit-input-placeholder{
+    font-size: 18px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.events .container form .form-wrapper input[type='text']::-moz-placeholder{
+    font-size: 18px;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+}
+.events .container form .form-wrapper input[type='text']:-ms-input-placeholder{
+    font-size: 18px;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+}
+.events .container form .form-wrapper input[type='text']::-ms-input-placeholder{
+    font-size: 18px;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+}
 .events .container form .form-wrapper input[type='text']::placeholder{
     font-size: 18px;
     transition: 0.3s;
+}
+.events .container form .form-wrapper input[type='text']:focus::-webkit-input-placeholder{
+    opacity: 0;
+}
+.events .container form .form-wrapper input[type='text']:focus::-moz-placeholder{
+    opacity: 0;
+}
+.events .container form .form-wrapper input[type='text']:focus:-ms-input-placeholder{
+    opacity: 0;
+}
+.events .container form .form-wrapper input[type='text']:focus::-ms-input-placeholder{
+    opacity: 0;
 }
 .events .container form .form-wrapper input[type='text']:focus::placeholder{
     opacity: 0;
@@ -1381,3 +1423,128 @@ section{
     }
 }
 /* End Events */
+
+/* Start pricing */
+.pricing{
+    background-color: #ececec;
+    padding: 100px 0;
+}
+.pricing .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+}
+.pricing .container .box{
+    background-color: white;
+    text-transform:capitalize;
+    box-shadow: 1px 2px 5px 5px rgb(0 0 0 /7%);
+    position: relative;
+    z-index: 1;
+}
+.pricing .container .box::after{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 50%;
+    z-index: -1;
+    width:0%;
+    background-color: #ececec;
+    transition: 0.3s;
+}
+.pricing .container .box::before{
+    content: '';
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 50%;
+    z-index: -1;
+    width: 0%;
+    background-color: #ececec;
+    transition: 0.3s;
+}
+.pricing .container .box:hover::before,.pricing .container .box:hover::after{
+    width: 100%;
+}
+.pricing .container .box .plan{
+    text-align: center;
+}
+.pricing .container .box .plan h2{
+    font-weight: 800;
+    padding: 20px 0;
+}
+.pricing .container .box .plan img{
+    max-width: 100px;
+}
+.pricing .container .box .plan span{
+    display: block;
+    font-size: 60px;
+    font-weight: 800;
+    margin-top: 20px;
+    color: var(--main-color);
+}
+.pricing .container .box .plan p{
+    color: #777;
+}
+.pricing .container .box > ul{
+    margin: 20px 0;
+}
+.pricing .container .box > ul li{
+    padding: 20px 0;
+    padding-left: 20px;
+    border-top: 1px #d5d5d5 solid;
+}
+.pricing .container .box > ul li::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    margin-right: 10px;
+    font-weight: 900;
+    color: var(--main-color);
+}
+.pricing .container .box button{
+    margin: 20px auto;
+    display: block;
+    padding: 15px 25px;
+    outline: 0;
+    border: #1787e0 solid 3px;
+    color: var(--main-color);
+    background-color: transparent;
+    border-radius:7px;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.pricing .container .box button:hover{
+    outline: 0;
+    background-color: #1787e0;
+    color: white;
+}
+.pricing .container .box:nth-child(2) .plan{
+    position: relative;
+}
+.pricing .container .box:nth-child(2) .plan .label{
+    background-color: #1787e0;
+    color: white;
+    padding: 10.5px;
+    font-weight: 800;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    writing-mode: vertical-lr;
+}
+.pricing .container .box:nth-child(2) .plan .label::after{
+    bottom: -42px;
+    content: '';
+    left: 0;
+    position: absolute;
+    border-color: #1787e0 #1787e0 transparent #1787e0;
+    border-width: 22px;
+    border-style: solid;
+    transition: 0.2s;
+    transition-delay: 0.2s;
+    
+}
+
+/* End pricing */
